@@ -9,12 +9,11 @@
 #
 # Define your function and call it below.
 
-
 def calculate_area_triangle(base, height):
     return (base * height) / 2
 
-
 print('Exercise 1:', calculate_area_triangle(10, 5))
+
 
 # Exercise 2: Calculate Simple Interest
 #
@@ -27,13 +26,12 @@ print('Exercise 1:', calculate_area_triangle(10, 5))
 #
 # Define your function and call it to see the result.
 
-
-
 def simple_interest(principal, rate, time):
     interest = (principal * rate * time) / 100
     return int(interest) if float(interest).is_integer() else interest
 
 print('Exercise 2:', simple_interest(1000, 5, 2))
+
 
 # Exercise 3: Apply a Discount
 #
@@ -46,13 +44,14 @@ print('Exercise 2:', simple_interest(1000, 5, 2))
 #
 # Define your function and call it to display the discounted price.
 
-
 def apply_discount(price, discount):
     discounted_price = price * ((100 - discount) / 100)
     return int(discounted_price) if float(discounted_price).is_integer() else discounted_price
 
+# Assumed currency is unknown, so no rounding
 
 print('Exercise 3:', apply_discount(100, 25))
+
 
 # Exercise 4: Convert Temperature
 #
@@ -68,7 +67,6 @@ print('Exercise 3:', apply_discount(100, 25))
 #
 # Define the function and then call it below.
 
-
 def convert_temperature(temp, unit):
     if str(unit).upper() == 'C':
         conv_temp = (temp * 9/5) + 32
@@ -79,9 +77,9 @@ def convert_temperature(temp, unit):
     
     return conv_temp
 
-
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
 print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
+
 
 # Exercise 5: Sum to N
 #
@@ -102,6 +100,7 @@ def sum_to(num):
 
 print('Exercise 5:', sum_to(6))
 
+
 # Exercise 6: Find the Largest Number
 #
 # Write a function named `largest` that takes three integers as arguments and returns the largest of them.
@@ -115,8 +114,8 @@ print('Exercise 5:', sum_to(6))
 def largest(intA, intB, intC):
     return max(intA, intB, intC)
 
-
 print('Exercise 6:', largest(1, 2, 3))
+
 
 # Exercise 7: Calculate a Tip
 #
@@ -133,6 +132,7 @@ def calculate_tip(bill, percent):
     return int(tip) if float(tip).is_integer() else tip
 
 print('Exercise 7:', calculate_tip(50, 20))
+
 
 # Exercise 8: Calculate Product of Numbers
 #
@@ -153,6 +153,7 @@ def product(*nums):
 
 print('Exercise 8:', product(2, 5, 5))
 
+
 # Exercise 9: Basic Calculator
 #
 # Create a function named `basicCalculator` that takes three arguments: 
@@ -169,7 +170,6 @@ print('Exercise 8:', product(2, 5, 5))
 # Define the function and then call it below.
 
 def basic_calculator(numA, numB, oper):
-
     oper = str(oper).lower()
     match oper:
         case 'add':
@@ -182,6 +182,6 @@ def basic_calculator(numA, numB, oper):
             result = numA / numB
         case _:
             return 'Erroneous argument(s)'
-            return int(result) if float(result).is_integer() else result
+    return int(result) if float(result).is_integer() else result
 
 print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
